@@ -5,13 +5,14 @@ public class Osoba {
     //modyfikator dostępu: private, protected
     //private - czyli widoczne tylko wewnątrz klasy
     private String imie;
-    private String nazwisko;
+    protected String nazwisko;
     private int wiek;
 
     //przeciążanie konstruktora, 3 konstruktory o rónych argumentach
     public Osoba(String imie, String nazwisko, int wiek) { //konstruktor
         this.imie = imie;
         this.nazwisko = nazwisko;
+
     }
 
     public Osoba(String imie, String nazwisko) {
