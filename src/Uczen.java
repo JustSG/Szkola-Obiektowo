@@ -1,4 +1,4 @@
-public class Uczen extends Osoba{
+public class Uczen extends Osoba implements Dyzurny{
     //dziedziczenie, musi dziedziczyć konstruktor od Osoba
     //Uczen to klasa potomna. Osoba to klasa bazowa. Uczen dziedziczy wszystko po klasie Osoba
     private int nrEwidencyjny;
@@ -19,5 +19,10 @@ public class Uczen extends Osoba{
     @Override // to string
     public String toString() {
         return "Uczen imie: " + getImie() + ", nazwisko: " + nazwisko + ", nrEwidencyjny: " + nrEwidencyjny;
+    }
+
+    @Override
+    public void wykonajDyzur() {
+        System.out.println("Wytarłem tablicę");
     }
 }
