@@ -22,6 +22,22 @@ public class Main {
         System.out.println("Liczba utworzonych obiektów: " + Uczen.liczbaObiektow);
         Uczen uczen4 = new Uczen("Wiktor", "Cebula", 17);
         System.out.println("Liczba utworzonych obiektów: " + Uczen.liczbaObiektow);
-        System.out.println("proba");
+
+        Nauczyciel nauczyciel = new Nauczyciel("Ryszard", "Koleski", 57, "Geografia");
+        Klasa klasaProgramistyczna = new Klasa("3P", nauczyciel);
+        Klasa klasaBiologiczna = new Klasa("3B", nauczyciel);
+
+        klasaProgramistyczna.dodajUczniaDoKlasy(uczenEmil);
+        klasaProgramistyczna.dodajUczniaDoKlasy(uczen2);
+        klasaProgramistyczna.dodajUczniaDoKlasy(uczen3);
+        klasaProgramistyczna.dodajUczniaDoKlasy(uczen4);
+
+        System.out.println(klasaProgramistyczna);
+        klasaProgramistyczna.wypiszListeUczniow();
+
+        Szkola zs10 = Szkola.getSzkola();
+        klasaProgramistyczna.usunUczniaZKlasy(uczen3);
+
+        klasaProgramistyczna.wypiszListeUczniow();
     }
 }
